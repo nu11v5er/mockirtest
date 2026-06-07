@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Documentation</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+
+<div id="sidebar">
+  <h2>Docs</h2>
+  <ul id="nav"></ul>
+</div>
+
+<div id="content">
+  Select a page from the sidebar.
+</div>
+
+<script>
+async function loadPages() {
+  const pages = await fetch('pages.json').then(r => r.json());
+
+  const nav = document.getElementById('nav');
+
+  pages.forEach(page => {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+
+    a.href = '#';
+    a.textContent = page.title;
+
+    a.onclick = async () => {
+      const md = await fetch(page.file).then(r => r.text());
+      document.getElementById('content').innerHTML =
+        marked.parse(md);
+    };
+
+    li.appendChild(a);
+    nav.appendChild(li);
+  });
+
+  if (pages.length) {
+    const md = await fetch(pages[0].file).then(r => r.text());
+    document.getElementById('content').innerHTML =
+      marked.parse(md);
+  }
+}
+
+loadPages();
+</script>
+
+</body>
+</html>
