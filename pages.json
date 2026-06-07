@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Welcome",
+    "file": "docs/welcome.md"
+  },
+  {
+    "title": "Guide",
+    "file": "docs/guide.md"
+  },
+  {
+    "title": "FAQ",
+    "file": "docs/faq.md"
+  }
+]
