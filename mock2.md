@@ -1,5 +1,5 @@
-# mock incident 3
-## **Mock Incident 1 – Phishing / Credential Harvesting**
+# mock incident 2
+## **Mock Incident 2 – Phishing / Credential Harvesting**
 
 **Case ID:** INC-2026-00125  
 **Severity:** High  
