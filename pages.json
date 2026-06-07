@@ -1,14 +1,22 @@
 [
   {
-    "title": "Welcome",
-    "file": "docs/welcome.md"
+    "title": "Mock 1",
+    "file": "docs/mock1.md"
   },
   {
-    "title": "Guide",
-    "file": "docs/guide.md"
+    "title": "Mock 2",
+    "file": "docs/mock2.md"
   },
   {
-    "title": "FAQ",
-    "file": "docs/faq.md"
+    "title": "Mock 3",
+    "file": "docs/mock3.md"
+  }
+  {
+    "title": "Mock 4",
+    "file": "docs/mock4.md"
+  }
+  {
+    "title": "Mock 5",
+    "file": "docs/mock5.md"
   }
 ]
